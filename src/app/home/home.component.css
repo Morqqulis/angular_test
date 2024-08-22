@@ -1,0 +1,36 @@
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+    column-gap: 14px;
+    row-gap: 14px;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  input[type="text"] {
+    display: inline-block;
+    margin-right: 4px;
+    border: solid 1px var(--primary-color);
+    border-radius: 8px;
+    padding: 10px;
+    width: 30%;
+  }
+  button {
+    border: solid 1px var(--primary-color);
+    border-radius: 8px;
+    background: var(--primary-color);
+    padding: 10px;
+    color: white;
+  }
+  @media (min-width: 500px) and (max-width: 768px) {
+    .results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    input[type="text"] {
+        width: 70%;
+    }   
+  }
+  @media (max-width: 499px) {
+    .results {
+        grid-template-columns: 1fr;
+    }    
+  }
